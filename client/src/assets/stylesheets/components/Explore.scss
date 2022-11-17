@@ -1,0 +1,63 @@
+@font-face {
+  font-family: ExploreTxt;
+  src: url('https://posh-b2.s3.us-east-2.amazonaws.com/CircularStd/CircularStd-Book.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.explore_wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.explore_wrap > p {
+  color: #ffcc00;
+  font-family: ExploreTxt;
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.explore_wrap > div {
+  height: 90px;
+  width: 585px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', helvetica, verdana, nunito;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  animation: fadeInRightB 2s forwards ease-out;
+}
+
+.explore_wrap > div.gold {
+  border: 2px solid #e0b400;
+  color: #e0b400;
+  box-shadow: 0px 0px 10px -2px #e0b400, 0px 0px 10px #e0b400 inset;
+}
+
+.explore_wrap > div.blue {
+  border: 2px solid #00aad4;
+  color: #00aad4;
+  box-shadow: 0px 0px 10px -2px #00aad4, 0px 0px 10px #00aad4 inset;
+}
+
+.explore_wrap > div.gold:hover {
+  box-shadow: 0 0 30px -2px #ffcc00, 0px 0px 10px #ffcc00 inset;
+}
+
+.explore_wrap > div.blue:hover {
+  box-shadow: 0 0 30px -2px #00ccff, 0px 0px 10px #00ccff inset;
+}
