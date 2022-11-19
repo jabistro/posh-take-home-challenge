@@ -23,7 +23,11 @@
   margin-top: 0px;
 }
 
-.explore_wrap > div {
+.explore_link {
+  text-decoration: none;
+}
+
+.explore_link > div {
   height: 90px;
   width: 585px;
   display: flex;
@@ -42,22 +46,22 @@
   animation: fadeInRightB 2s forwards ease-out;
 }
 
-.explore_wrap > div.gold {
+.explore_link > div.gold {
   border: 2px solid #e0b400;
   color: #e0b400;
   box-shadow: 0px 0px 10px -2px #e0b400, 0px 0px 10px #e0b400 inset;
 }
 
-.explore_wrap > div.blue {
+.explore_link > div.blue {
   border: 2px solid #00aad4;
   color: #00aad4;
   box-shadow: 0px 0px 10px -2px #00aad4, 0px 0px 10px #00aad4 inset;
 }
 
-.explore_wrap > div.gold:hover {
+.explore_link > div.gold:hover {
   box-shadow: 0 0 30px -2px #ffcc00, 0px 0px 10px #ffcc00 inset;
 }
 
-.explore_wrap > div.blue:hover {
+.explore_link > div.blue:hover {
   box-shadow: 0 0 30px -2px #00ccff, 0px 0px 10px #00ccff inset;
 }
