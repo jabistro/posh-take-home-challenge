@@ -1,6 +1,6 @@
-import {model, Schema} from 'mongoose'
+import mongoose, {Document, Schema} from 'mongoose'
 
-interface Event {
+export interface Event {
   name: string
   flyer: string
   groupAvi: string
@@ -16,7 +16,9 @@ interface Event {
   }
 }
 
-const eventSchema = new Schema<Event>({
+export interface EventModel extends Event, Document {}
+
+const EventSchema: Schema = new Schema({
   name: String,
   flyer: String,
   groupAvi: String,
@@ -32,6 +34,4 @@ const eventSchema = new Schema<Event>({
   },
 })
 
-const Event = model<Event>('Event', eventSchema)
-
-export default Event
+export default mongoose.model<EventModel>('Event', EventSchema)

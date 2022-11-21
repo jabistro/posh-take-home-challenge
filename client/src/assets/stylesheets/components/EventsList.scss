@@ -1,6 +1,6 @@
 *,
-::after,
-::before {
+:after,
+:before {
   box-sizing: border-box !important;
 }
 
@@ -12,12 +12,18 @@ div {
   display: block;
 }
 
+::-webkit-scrollbar {
+  background: #0c0d0f;
+  width: 8px;
+}
+
 .events_wrap {
-  width: 100vw;
-  background: #000;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  background: #000;
   overflow: hidden;
+  font-family: 'Nunito', helvetica, verdana, nunito;
 }
 
 .events_wrap > video {
@@ -59,6 +65,10 @@ div {
   min-height: calc(100vh - 300px);
 }
 
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 .events_body_main {
   display: flex;
   flex-direction: column;
@@ -82,9 +92,6 @@ div {
 
 .events_body_main_nav_right > div {
   border: 1px solid #7a7b7d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   font-family: Circular Std;
   font-weight: 700;
@@ -95,6 +102,9 @@ div {
   cursor: pointer;
   transition: 0.2s;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .events_body_main_nav_right > div:hover {
@@ -106,6 +116,38 @@ div {
   border: 1px solid #fc0;
   color: #fc0;
 }
+
+.EventCardGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+// @media only screen and (max-width: 500px) {
+//   .EventCardGrid {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
+
+// @media only screen and (max-width: 700px) {
+//   .EventCardGrid {
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+// }
+
+// @media only screen and (max-width: 900px) {
+//   .EventCardGrid {
+//     grid-template-columns: repeat(4, 1fr);
+//   }
+// }
+
+// @media only screen and (max-width: 1050px) {
+//   .EventCardGrid {
+//     grid-template-columns: repeat(5, 1fr);
+//   }
+// }
 
 .events_back {
   position: absolute;

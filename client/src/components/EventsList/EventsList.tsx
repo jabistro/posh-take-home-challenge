@@ -1,6 +1,10 @@
 import '../../assets/stylesheets/components/EventsList.scss'
 
+import EventCard from 'components/EventCard/EventCard'
 import React from 'react'
+import {Link} from 'react-router-dom'
+
+import testEvents from './TestEvents'
 
 const EventsList = () => {
   // async function getEvents(): Promise<Response> {
@@ -42,13 +46,19 @@ const EventsList = () => {
               <div>🦃 Thanksgiving</div>
             </div>
           </div>
-          <div className='events_body_main_results EventCardGrid'>Events Card</div>
+          <div className='events_body_main_results EventCardGrid'>
+            {testEvents.map((event, idx) => (
+              <EventCard event={event} key={idx} />
+            ))}
+          </div>
         </div>
       </div>
-      <img
-        className='events_back'
-        src='https://posh-b2.s3.us-east-2.amazonaws.com/left-arrow-in-circular-button-black-symbol.svg'
-      />
+      <Link to='/'>
+        <img
+          className='events_back'
+          src='https://posh-b2.s3.us-east-2.amazonaws.com/left-arrow-in-circular-button-black-symbol.svg'
+        />
+      </Link>
     </div>
   )
 }
