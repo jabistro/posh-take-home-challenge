@@ -25,10 +25,8 @@ const db = mongoose.connection.once('open', async () => {
   console.log('Agenda initialized')
 })
 
-// console.log(db)
+app.use('/events', eventRoutes)
 
 app.listen(server_port, server_host, () => {
   console.log('Running Server')
 })
-
-app.use('/events', eventRoutes)

@@ -29,9 +29,11 @@ const EventSchema: Schema = new Schema({
   venueName: String,
   groupName: String,
   location: {
-    type: String,
-    coordinates: [Number],
+    type: {type: String},
+    coordinates: {type: [Number]},
   },
 })
 
-export default mongoose.model<EventModel>('Event', EventSchema)
+const Event = mongoose.model<EventModel>('Event', EventSchema)
+
+export default Event

@@ -1,7 +1,7 @@
 import '../../assets/stylesheets/components/EventsList.scss'
 
 import EventCard from 'components/EventCard/EventCard'
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 import testEvents from './TestEvents'
@@ -18,6 +18,17 @@ const EventsList = () => {
   // }
 
   // getEvents()
+  async function getEvents() {
+    const res = await fetch(`${process.env.API_URL}v1/events`)
+
+    const data = await res.json()
+
+    return data
+  }
+
+  useEffect(() => {
+    getEvents()
+  }, [])
 
   return (
     <div className='events_wrap'>

@@ -4,6 +4,6 @@ import getEvents from '../controllers/Event'
 
 const router = express.Router()
 
-router.get('/get/', getEvents)
+router.get('/', getEvents)
 
 export = router
